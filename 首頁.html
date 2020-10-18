@@ -14,25 +14,36 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
     <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             box-sizing: border-box;
         }
 
         body {
-            height: 3000px;
             margin: 0;
             padding: 0;
             position: relative;
+            /* height: 3000px; */
         }
 
         /* <!-- 第一頁 --> */
 
-    
+
         #homepagebackground {
             width: 100%;
             height: 100vh;
             background-color: rgb(246, 231, 236);
-            display: flex;
+
+
 
 
 
@@ -40,20 +51,23 @@
 
         #logo {
             width: 10%;
-            height: 10%;
+            height: 15%;
             background-image: url(./素材/logo-2_工作區域\ 1.無背景.png);
             background-size: contain;
             background-repeat: no-repeat;
             position: absolute;
-            top: 0;
+            top: -8px;
             left: 45%;
-            z-index: 1000;
+            z-index: 100;
         }
 
         #homepic-1 {
             width: 50%;
             height: 100%;
             background-image: url(./素材/首頁終版-1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             flex-wrap: wrap;
 
         }
@@ -63,11 +77,337 @@
             height: 50%;
             background-image: url(./素材/432beb27b0790a3f1f7d1db961c66aee.jpg);
             background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             margin: auto;
             position: absolute;
             top: 25%;
             right: 15%;
 
+        }
+
+        /* navbar */
+        .dropdown-menu {
+            width: 600px;
+            
+
+            background-color: white;
+        }
+
+        .bg-light {
+            background-color: white !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: rgb(250, 208, 208);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: rgba(236, 26, 124, 0.7);
+        }
+
+        .nav-item {
+            margin: 0 20px;
+        }
+
+        .navbar-brand {
+            width: 60px;
+            height: 60px;
+            background-image: url(./素材/logo-2_工作區域\ 1.無背景.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .navbar {
+            min-height: 3%;
+            opacity: 0.9;
+            z-index: 500;
+
+        }
+
+        #navbar {
+            position: fixed;
+            /* Make it stick/fixed */
+            top: -50px;
+            
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            /* Transition effect when sliding down (and up) */
+        }
+
+
+
+
+        /* 商品列 */
+
+        p {
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .swiper-container {
+            width: 50%;
+            height: 45%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* background: rosybrown; */
+            margin: 0 3px;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(159, 154, 150);
+            text-decoration: none;
+        }
+
+        .menpic-1 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片1-1.jpg);
+            background-position: left;
+            background-size: cover;
+
+        }
+
+        #menpic-1:hover {
+            background-image: url(./素材/照片1-2.jpg);
+            background-position: center;
+        }
+
+        .menpic-2 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片2.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .menpic-3 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片3-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .menpic-4 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Metal\ Vent\ Tech\ Sleeveless\ 2.0.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .womenpic-1 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照面1-1.jpg);
+            background-position: left;
+            background-size: cover;
+        }
+
+        .womenpic-2 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片2-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .womenpic-3 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片3-1.jpg);
+            background-position: right;
+            background-size: cover;
+
+
+        }
+
+        .womenpic-4 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片4-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .product {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+
+        }
+
+        .price {
+            font-weight: 600;
+            font-size: 18px;
+
+
+        }
+
+        .star {
+            font-size: 12px;
+        }
+
+
+        /* 搜尋框 */
+
+        #search {
+            width: 30px;
+            height: 30px;
+            z-index: 500;
+            background-image: url(./素材/搜尋框_工作區域\ 1.png);
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            right: 40px;
+            bottom: 50vh;
+            margin-bottom: 5px;
+        }
+        #search:hover{
+            background-image: url(./素材/搜尋框hover_工作區域\ 1.png);
+        }
+        #cart {
+            width: 30px;
+            height: 30px;
+            z-index: 500;
+            background-image: url(./素材/搜尋框_工作區域\ 1\ 複本.png);
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            right: 40px;
+            bottom: 45vh;
+            margin-bottom: 8px;
+        }
+
+        #cart:hover{
+            background-image: url(./素材/搜尋框hover_工作區域\ 1\ 複本.png);
+        }
+
+
+        #member {
+            width: 30px;
+            height: 30px;
+            z-index: 500;
+            background-image: url(./素材/搜尋框_工作區域\ 1\ 複本\ 2.png);
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            right: 40px;
+            bottom: 40vh;
+        }
+        #member:hover{
+            background-image: url(./素材/搜尋框hover_工作區域\ 1\ 複本\ 2.png);
+        }
+
+
+       
+/* 配件區 */
+        #accesary{
+            width: 100%;
+            height: 100vh;
+            background-image: url(./素材/插畫-01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex: right;
+            position: relative;
+        }
+
+        #bigbox{
+            width: 60%;
+            height: 70%;
+            border: lavender solid 2px;
+            position: absolute;
+            left: 10%;
+            top: 20%;
+            padding-left: 50px;
+            display: flex;
+            flex-wrap: wrap;
+          
+        }
+
+        #accesarybig{
+            width: 30%;
+            height: 80%;
+           background-color: lightblue;
+         
+            position: absolute;
+            right: 10%;
+            bottom: 5%;
+          
+        }
+
+        .accesarypics{
+            width: 20%;
+            height: 30%;
+            background-color: lightpink;
+            margin: auto 30px;
+        }
+
+        #smalltitle{
+            width: 8%;
+            height: 40%;
+            background-color:rgb(210, 218,233);
+            margin-bottom: 0px;
+        }
+     
+
+        @media (max-width: 760px) {
+            .swiper-button-next {
+                right: 20px;
+                transform: rotate(90deg);
+            }
+
+            .swiper-button-prev {
+                left: 20px;
+                transform: rotate(90deg);
+            }
         }
     </style>
 </head>
@@ -75,16 +415,241 @@
 <body>
     <!-- 第一頁 -->
     <div id="logo" data-aos="fade-up" data-aos-easing="ease-in-sine"></div>
-    
+
     <div id="homepagebackground" data-aos="fade-right" data-aos-easing="ease-in-sine">
         <div id="homepic-1" data-aos="fade-right " data-aos-delay="500" data-aos-easing="ease-in-sine"></div>
         <div id="homepic-2" data-aos="fade-left" data-aos-delay="900" data-aos-easing="ease-in-sine"></div>
     </div>
 
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " id="navbar">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MENS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="chooseitem" width="50%">
+                            <a class="dropdown-item" href="#">ALL PRODUCTS</a>
+                            <a class="dropdown-item" href="#">NEW ARRIVALS</a>
+                            <a class="dropdown-item" href="#">BEACHWEAR</a>
+                            <a class="dropdown-item" href="#">T-SHIRTS</a>
+                            <a class="dropdown-item" href="#">HOODIES</a>
+                            <a class="dropdown-item" href="#">STRINGERS & VESTS</a>
+                            <a class="dropdown-item" href="#">TRACKSUITS</a>
+                            <a class="dropdown-item" href="#">BOTTOMS & LEGGINGS</a>
+                        </div>
+                        <div class="chooseitem" width="50%"><a class="dropdown-item navbar-pic" href="#"><img
+                                    src="./素材/print-drawstring-waist-dolphin-casual-shorts-062314_2.jpg" alt=""
+                                    width="20%" height="50%" id="menpic"></a>
+                        </div>
 
-    
+                    </div>
 
-    <!-- 商品列 -->
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        WOMENS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="chooseitem" width="50%">
+                            <a class="dropdown-item" href="#">ALL PRODUCTS</a>
+                            <a class="dropdown-item" href="#">NEW ARRIVALS</a>
+                            <a class="dropdown-item" href="#">BEACHWEAR</a>
+                            <a class="dropdown-item" href="#">T-SHIRTS</a>
+                            <a class="dropdown-item" href="#">SPORTS BRA</a>
+                            <a class="dropdown-item" href="#">STRINGERS & VESTS</a>
+                            <a class="dropdown-item" href="#">CO-ORD SETS</a>
+                            <a class="dropdown-item" href="#">BOTTOMS & LEGGINGS</a>
+                        </div>
+                        <div class="chooseitem" width="50%"><a class="dropdown-item navbar-pic" href="#"><img
+                                    src="./素材/print-drawstring-waist-dolphin-casual-shorts-062314_2.jpg" alt=""
+                                    width="20%" height="50%" id="menpic"></a>
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ACCESSORIES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="chooseitem" width="50%">
+                            <a class="dropdown-item" href="#">ALL PRODUCTS</a>
+                            <a class="dropdown-item" href="#">HEADWEAR</a>
+                            <a class="dropdown-item" href="#">EQUIPMENT</a>
+                            <a class="dropdown-item" href="#">BAGS</a>
+                            <a class="dropdown-item" href="#">SOCKS</a>
+                            <a class="dropdown-item" href="#">BOTTLES</a>
+
+                        </div>
+                        <div class="chooseitem" width="50%"><a class="dropdown-item navbar-pic" href="#"><img
+                                    src="./素材/print-drawstring-waist-dolphin-casual-shorts-062314_2.jpg" alt=""
+                                    width="20%" height="50%" id="menpic"></a>
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">NEW ARRIVAL</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  
+    <!-- 商品列Swiper -->
+    <br>
+    <p>SHOP MENS</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-1" id="menpic-1"></div>
+                    <div class="product text-left">WP T-SHIRT</div>
+                    <div class="price text-left">$20.00 USD</div>
+                    <div class="star text-left">★★★★(2092)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-2"></div>
+                    <div class="product text-left">Apolo T-SHIRT</div>
+                    <div class="price text-left">$25.00 USD</div>
+                    <div class="star text-left">★★★★(1846)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-3"></div>
+                    <div class="product text-left">Critical HOODIE</div>
+                    <div class="price text-left">$55.00 USD</div>
+                    <div class="star text-left">★★★★★(5487)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-4"></div>
+                    <div class="product text-left">Vent Sleeveless 2.0</div>
+                    <div class="price text-left">$12.00 USD</div>
+                    <div class="star text-left">★★★(87)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <br>
+    <p>SHOP WOMENS</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-1" id="menpic-1"></div>
+                    <div class="product text-left">Training Leggings</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(9851)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-2"></div>
+                    <div class="product text-left">Sports Bra</div>
+                    <div class="price text-left">$40.00 USD</div>
+                    <div class="star text-left">★★★★★(6612)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-3"></div>
+                    <div class="product text-left">Flex Tank</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★★(8799)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-4"></div>
+                    <div class="product text-left">Crop Top</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(7719)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- 搜尋框 -->
+    <button onclick="topFunction()" id="searchbar" title="searchbar">
+        <div id="search"></div>
+        <div id="cart"></div>
+        <div id="member"></div></button>
+    <a href="" id="">
+       
+    </a>
+
+<!-- 配件區 -->
+<div id="accesary">
+    <div id="bigbox">
+        <div class="accesarypics"  data-aos="fade-up"
+        data-aos-duration="2000"></div>
+        <div class="accesarypics" data-aos="fade-up"
+        data-aos-duration="2000"></div>
+        <div class="accesarypics" data-aos="fade-up"
+        data-aos-duration="2000"></div>
+        <div class="accesarypics" data-aos="fade-up"
+        data-aos-duration="2000"></div>
+        <div class="accesarypics" data-aos="fade-up"
+        data-aos-duration="2000"></div>
+        <div class="accesarypics" data-aos="fade-up"
+        data-aos-duration="2000"></div>
+    </div>
+    <div id="accesarybig"  data-aos="flip-right" >
+        <div id="smalltitle">ACCESSORIES</div>
+    </div>
+</div>
+
+
+
+
+
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -98,15 +663,61 @@
         crossorigin="anonymous"></script>
 
 
+<!-- navbar -->
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+</script>
+
+<!-- 搜尋框 -->
+
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
+
+
     <!-- 商品列 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
+    <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper('.swiper-container');
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            direction: getDirection(),
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                    swiper.changeDirection(getDirection());
+                }
+            }
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
     </script>
+
+
+
+
 </body>
 
 </html>

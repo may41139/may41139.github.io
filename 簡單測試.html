@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      /* height: 3000px; */
+    }
+    .allnew{
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+    }
+
+    #new {
+      width: 50%;
+      height: 100%;
+      background-color: rgb(246, 231, 236);
+      position: relative;
+    
+
+    }
+
+    .content_container {
+      width: 50%;
+      height: 30%;
+      background-color: white;
+      position: absolute;
+      margin: 35% 25%;
+
+
+    }
+
+    .prev {
+      color: rgb(188, 122, 153);
+      position: absolute;
+      top: 80%;
+      left: 25%;
+      z-index: 10;
+    }
+
+    .next {
+      color: rgb(188, 122, 153);
+      position: absolute;
+      top: 80%;
+      right: 25%;
+      z-index: 10;
+    }
+
+   
+
+    .swiper-pagination-2 {
+      position: absolute;
+      bottom: 80%;
+      right: 25%;
+      z-index: 10;
+      color: rgb(188, 122, 153);
+    }
+
+
+
+    .arrow {
+      border: solid rgb(188, 122, 153);
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 4px;
+      margin: 0 2px;
+    }
+
+    .right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    .left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+
+    .right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    #new-1-1{
+      width: 100%;
+      height: 100%;
+      background-image: url(./素材/新品1-1.jpg);
+      background-size: cover;
+    }
+
+    #new-2-1{
+      width: 100%;
+      height: 100%;
+      background-image: url(./素材/新品2-1.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    #new-3-1{
+      width: 100%;
+      height: 100%;
+      background-image: url(./素材/新品3-1.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    #new-4-1{
+      width: 100%;
+      height: 100%;
+      background-image: url(./素材/新品4-1.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    #new-5-1{
+      width: 100%;
+      height: 100%;
+      background-image: url(./素材/新品5-1.png);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-pagination-current{
+      position: absolute;
+      bottom: 80%;
+      left: 25%;
+      z-index: 10;
+    }
+
+    .swiper-pagination-total{
+      position: absolute;
+      bottom: 80%;
+      right: 25%;
+      z-index: 10;
+    }
+
+    .right-swiper{
+      width: 50%;
+      height: 100%;
+      background-color: saddlebrown;
+    }
+    #new-1-2{
+      background-image: url(./素材/新品1-2.jpg);
+      background-size: cover;
+    }
+    #new-2-2{
+      background-image: url(./素材/新品2-2.jpg);
+      background-size: cover;
+    }
+    #new-3-2{
+      background-image: url(./素材/新品3-2.jpg);
+      background-size: cover;
+    }
+    #new-4-2{
+      background-image: url(./素材/新品4-2.jpg);
+      background-size: cover;
+    }
+    #new-5-2{
+      background-image: url(./素材/新品5-2.png);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <div class="allnew">
+    <div id="new">
+      <div class="swiper-container content_container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="new-1-1"></div>
+          <div class="swiper-slide" id="new-2-1"></div>
+          <div class="swiper-slide" id="new-3-1"></div>
+          <div class="swiper-slide" id="new-4-1"></div>
+          <div class="swiper-slide" id="new-5-1"></div>
+         
+        </div>
+  
+  
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination swiper-pagination-2"></div>
+      <!-- Add Arrows -->
+      <div class="prev"><i class="arrow left"></i>Prev</div>
+      <div class="next">Next<i class="arrow right"></i></div>
+    </div>
+  
+  
+  
+  
+    <!-- 右半邊 -->
+      <!-- Swiper -->
+      <div class="swiper-container right-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="new-1-2"></div>
+          <div class="swiper-slide" id="new-2-2"></div>
+          <div class="swiper-slide" id="new-3-2"></div>
+          <div class="swiper-slide" id="new-4-2"></div>
+          <div class="swiper-slide" id="new-5-2"></div>
+        
+        </div>
+      </div>
+  </div>
+
+  
+  
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script>
+    var content_container = new Swiper('.content_container', {
+      pagination: {
+        el: '.swiper-pagination-2',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+      },
+    });
+    var right_swiper = new Swiper('.right-swiper');
+
+
+// 2個合併
+
+    content_container.on('slideChange', function () {
+            // activeIndex為被啟動的物件索引值
+            // content_container.activeIndex 抓取content_container被啟動的索引值
+            console.log(content_container.activeIndex);
+            // .slideTo(index[索引值必填], speed[選填], runCallbacks[選填]);當選到對應索引值進行滑動，用於兩個swiper間控制
+            //contnet_swiper.slideTo(content_container.activeIndex);對應content_container的索引值，控制contnet_swiper移動相對應索引值
+            right_swiper.slideTo(content_container.activeIndex);
+        });
+
+    
+  </script>
+</body>
+
+</html>

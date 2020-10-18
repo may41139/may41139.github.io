@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .swiper-container {
+            width: 50%;
+            height: 45%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: rosybrown;
+            margin: 0 3px;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(159, 154, 150);
+            text-decoration: none;
+        }
+
+        .menpic-1 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片1-1.jpg);
+            background-position: left;
+            background-size: cover;
+
+        }
+
+        #menpic-1:hover {
+            background-image: url(./素材/照片1-2.jpg);
+            background-position: center;
+        }
+
+        .menpic-2 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片2.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .menpic-3 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片3-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .menpic-4 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Metal\ Vent\ Tech\ Sleeveless\ 2.0.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .womenpic-1 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照面1-1.jpg);
+            background-position: left;
+            background-size: cover;
+        }
+
+        .womenpic-2 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片2-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .womenpic-3 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片3-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .womenpic-4 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片4-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .product {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+
+        }
+
+        .price {
+            font-weight: 600;
+            font-size: 18px;
+
+
+        }
+
+        .star {
+            font-size: 12px;
+        }
+
+        @media (max-width: 760px) {
+            .swiper-button-next {
+                right: 20px;
+                transform: rotate(90deg);
+            }
+
+            .swiper-button-prev {
+                left: 20px;
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Swiper -->
+    <p>SHOP MENS</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-1" id="menpic-1"></div>
+                    <div class="product text-left">WP T-SHIRT</div>
+                    <div class="price text-left">$20.00 USD</div>
+                    <div class="star text-left">★★★★(2092)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-2"></div>
+                    <div class="product text-left">Apolo T-SHIRT</div>
+                    <div class="price text-left">$25.00 USD</div>
+                    <div class="star text-left">★★★★(1846)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-3"></div>
+                    <div class="product text-left">Critical HOODIE</div>
+                    <div class="price text-left">$55.00 USD</div>
+                    <div class="star text-left">★★★★★(5487)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-4"></div>
+                    <div class="product text-left">Vent Sleeveless 2.0</div>
+                    <div class="price text-left">$12.00 USD</div>
+                    <div class="star text-left">★★★(87)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+    <p>SHOP WOMENS</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-1" id="menpic-1"></div>
+                    <div class="product text-left">Training Leggings</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(9851)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-2"></div>
+                    <div class="product text-left">Sports Bra</div>
+                    <div class="price text-left">$40.00 USD</div>
+                    <div class="star text-left">★★★★★(6612)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-3"></div>
+                    <div class="product text-left">Flex Tank</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★★(8799)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-4"></div>
+                    <div class="product text-left">Crop Top</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(7719)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+            <div class="swiper-slide">Resize me!</div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            direction: getDirection(),
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                    swiper.changeDirection(getDirection());
+                }
+            }
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

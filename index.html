@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Architects+Daughter&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            /* height: 3000px; */
+        }
+
+        /* <!-- 第一頁 --> */
+
+
+        #homepagebackground {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(246, 231, 236);
+
+
+
+
+
+        }
+
+        #logo {
+            width: 10%;
+            height: 15%;
+            background-image: url(./素材/logo-2_工作區域\ 1.無背景.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -8px;
+            left: 45%;
+            z-index: 100;
+        }
+
+        #homepic-1 {
+            width: 50%;
+            height: 100%;
+            background-image: url(./素材/首頁終版-1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-wrap: wrap;
+
+        }
+
+        #homepic-2 {
+            width: 20%;
+            height: 50%;
+            background-image: url(./素材/432beb27b0790a3f1f7d1db961c66aee.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: auto;
+            position: absolute;
+            top: 25%;
+            right: 15%;
+
+        }
+
+        /* navbar */
+        .dropdown-menu {
+            width: 600px;
+
+
+            background-color: white;
+        }
+
+        .bg-light {
+            background-color: white !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: rgb(250, 208, 208);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: rgba(236, 26, 124, 0.7);
+        }
+
+        .nav-item {
+            margin: 0 20px;
+        }
+
+        .navbar-brand {
+            width: 60px;
+            height: 60px;
+            background-image: url(./素材/logo-2_工作區域\ 1.無背景.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .navbar {
+            min-height: 3%;
+            opacity: 0.9;
+            z-index: 500;
+
+        }
+
+        #navbar {
+            position: fixed;
+            /* Make it stick/fixed */
+            top: -50px;
+
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            /* Transition effect when sliding down (and up) */
+        }
+
+
+
+
+        /* 商品列 */
+
+        p {
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Architects Daughter', cursive;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .swiper-container {
+            width: 50%;
+            height: 45%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* background: rosybrown; */
+            margin: 0 3px;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(159, 154, 150);
+            text-decoration: none;
+        }
+
+        .menpic-1 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片1-1.jpg);
+            background-position: left;
+            background-size: cover;
+
+        }
+
+        #menpic-1:hover {
+            background-image: url(./素材/照片1-2.jpg);
+            background-position: center;
+        }
+
+        .menpic-2 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片2.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .menpic-2:hover {
+            background-image: url(./素材/12015575-8084691695588692.jpg);
+        }
+
+
+        .menpic-3 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片3-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .menpic-3:hover {
+            background-image: url(./素材/照片3-2.jpg);
+        }
+
+        .menpic-4 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Metal\ Vent\ Tech\ Sleeveless\ 2.0.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .menpic-4:hover {
+            background-image: url(./素材/照片4-2.jpg);
+        }
+
+        .menpic-5 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/man\ Jacket.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .menpic-5:hover {
+            background-image: url(./素材/man\ Jacket-2.jpg);
+        }
+
+        .menpic-6 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Metal\ Vent\ Tech\ Short\ Sleeve\ 2.0-1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .menpic-6:hover {
+            background-image: url(./素材/Metal\ Vent\ Tech\ Short\ Sleeve\ 2.0.jpg);
+        }
+
+        .menpic-7 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Motivation\ Short-1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .menpic-7:hover {
+            background-image: url(./素材/Motivation\ Short-2.jpg);
+        }
+
+        .menpic-8 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Active\ Jacket.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .menpic-8:hover {
+            background-image: url(./素材/Active\ Jacket-2.jpg);
+        }
+
+        .menpic-9 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/照片1-1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .menpic-9:hover {
+            background-image: url(./素材/照片1-2.jpg);
+        }
+
+        .womenpic-1 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照面1-1.jpg);
+            background-position: left;
+            background-size: cover;
+        }
+
+        .womenpic-1:hover {
+            background-image: url(./素材/女生照片1-2.jpg);
+        }
+
+        .womenpic-2 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片2-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .womenpic-2:hover {
+            background-image: url(./素材/女生照片2-2.jpg);
+        }
+
+
+        .womenpic-3 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片3-1.jpg);
+            background-position: right;
+            background-size: cover;
+
+
+        }
+
+        .womenpic-3:hover {
+            background-image: url(./素材/女生照片3-2.jpg);
+        }
+
+        .womenpic-4 {
+
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/女生照片4-1.jpg);
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .womenpic-4:hover {
+            background-image: url(./素材/女生照片4-2.jpg);
+        }
+
+        .womenpic-5 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Enlightened\ Layer\ Jacket.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .womenpic-5:hover {
+            background-image: url(./素材/Enlightened\ Layer\ Jacket-2.jpg);
+        }
+
+        .womenpic-6 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Motion\ Fitness\ Set\ -\ Leggings\ +\ Top.webp);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .womenpic-6:hover {
+            background-image: url(./素材/Motion\ Fitness\ Set\ -\ Leggings\ +\ Top-2.webp);
+        }
+
+        .womenpic-7 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/legging\ set.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .womenpic-7:hover {
+            background-image: url(./素材/leggset-2.jpg);
+        }
+
+        .womenpic-8 {
+            width: 230px;
+            height: 320px;
+            background-image: url(./素材/Sport\ bra6-1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .womenpic-8:hover {
+            background-image: url(./素材/Sportbra6-2.jpg);
+        }
+
+
+        .product {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+
+        }
+
+        .price {
+            font-weight: 600;
+            font-size: 18px;
+
+
+        }
+
+        .star {
+            font-size: 12px;
+        }
+
+
+        /* 搜尋框 */
+
+        #search {
+            width: 30px;
+            height: 30px;
+            z-index: 500;
+            background-image: url(./素材/搜尋框_工作區域\ 1.png);
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            right: 40px;
+            bottom: 50vh;
+            margin-bottom: 5px;
+        }
+
+        #search:hover {
+            background-image: url(./素材/搜尋框hover_工作區域\ 1.png);
+            transition: 0.8s;
+        }
+
+        #cart {
+            width: 30px;
+            height: 30px;
+            z-index: 500;
+            background-image: url(./素材/搜尋框_工作區域\ 1\ 複本.png);
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            right: 40px;
+            bottom: 45vh;
+            margin-bottom: 8px;
+        }
+
+        #cart:hover {
+            background-image: url(./素材/搜尋框hover_工作區域\ 1\ 複本.png);
+            transition: 0.8s;
+        }
+
+
+        #member {
+            width: 30px;
+            height: 30px;
+            z-index: 500;
+            background-image: url(./素材/搜尋框_工作區域\ 1\ 複本\ 2.png);
+            background-position: center;
+            background-size: cover;
+            position: fixed;
+            right: 40px;
+            bottom: 40vh;
+        }
+
+        #member:hover {
+            background-image: url(./素材/搜尋框hover_工作區域\ 1\ 複本\ 2.png);
+            transition: 0.8s;
+        }
+
+
+
+        /* 配件區 */
+        #accesary {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./素材/插畫-01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex: right;
+            position: relative;
+        }
+
+        #bigbox {
+            width: 55%;
+            height: 70%;
+            border: lavender solid 2px;
+            position: absolute;
+            left: 10%;
+            top: 20%;
+            padding-left: 50px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #accesarybig {
+            width: 30%;
+            height: 80%;
+            /* background-color: lightblue; */
+            background-image: url(./素材/ACCESSORIES_工作區域\ 1.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            position: absolute;
+            right: 10%;
+            bottom: 5%;
+
+        }
+
+        .accesarypics {
+            width: 20%;
+            height: 30%;
+            background-color: lightpink;
+            margin: auto 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        #accesarypics-1 {
+            background-image: url(./素材/ACCESSORIES-1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #accesarypics-2 {
+            background-image: url(./素材/ACCESSORIES-2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #accesarypics-3 {
+            background-image: url(./素材/ACCESSORIES-3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #accesarypics-4 {
+            background-image: url(./素材/ACCESSORIES-4.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #accesarypics-5 {
+            background-image: url(./素材/ACCESSORIES-5.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        #accesarypics-6 {
+            background-image: url(./素材/ACCESSORIES-6.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        .mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 15px 10px 40px 10px;
+            position: absolute;
+            top: 75%;
+            left: 0;
+
+        }
+
+        h4,
+        h5 {
+            text-align: center;
+            color: white;
+            font-family: 'Amatic SC', cursive;
+            font-size: 24px;
+
+        }
+
+        .accesarypics:hover .mask {
+            top: 0;
+            transition: 0.8s;
+        }
+
+        @media (max-width: 760px) {
+            .swiper-button-next {
+                right: 20px;
+                transform: rotate(90deg);
+            }
+
+            .swiper-button-prev {
+                left: 20px;
+                transform: rotate(90deg);
+            }
+        }
+
+
+        /* 新品區塊 */
+        .allnew {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+        }
+
+        #new {
+            width: 50%;
+            height: 100%;
+            background-color: rgb(246, 231, 236);
+            position: relative;
+
+
+        }
+
+        .content_container {
+            width: 50%;
+            height: 30%;
+            background-color: white;
+            position: absolute;
+            margin: 35% 25%;
+
+
+        }
+
+        .prev {
+            color: rgb(188, 122, 153);
+            position: absolute;
+            top: 80%;
+            left: 25%;
+            z-index: 10;
+        }
+
+        .next {
+            color: rgb(188, 122, 153);
+            position: absolute;
+            top: 80%;
+            right: 25%;
+            z-index: 10;
+        }
+
+
+
+        .swiper-pagination-2 {
+            position: absolute;
+            bottom: 80%;
+            right: 25%;
+            z-index: 10;
+            color: rgb(188, 122, 153);
+        }
+
+
+        .arrow {
+            border: solid rgb(188, 122, 153);
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 4px;
+            margin: 0 2px;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        #new-1-1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(./素材/新品1-1.jpg);
+            background-size: cover;
+        }
+
+        #new-2-1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(./素材/新品2-1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #new-3-1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(./素材/新品3-1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #new-4-1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(./素材/新品4-1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #new-5-1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(./素材/新品5-1.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .swiper-pagination-current {
+            position: absolute;
+            bottom: 80%;
+            left: 25%;
+            z-index: 10;
+        }
+
+        .swiper-pagination-total {
+            position: absolute;
+            bottom: 80%;
+            right: 25%;
+            z-index: 10;
+        }
+
+        .right-swiper {
+            width: 50%;
+            height: 100%;
+            background-color: saddlebrown;
+        }
+
+        #new-1-2 {
+            background-image: url(./素材/新品1-2.jpg);
+            background-size: cover;
+        }
+
+        #new-2-2 {
+            background-image: url(./素材/新品2-2.jpg);
+            background-size: cover;
+        }
+
+        #new-3-2 {
+            background-image: url(./素材/新品3-2.jpg);
+            background-size: cover;
+        }
+
+        #new-4-2 {
+            background-image: url(./素材/新品4-2.jpg);
+            background-size: cover;
+        }
+
+        #new-5-2 {
+            background-image: url(./素材/新品5-2.png);
+            background-size: cover;
+        }
+
+        .next:focus {
+            outline: none;
+        }
+
+        .prev:focus {
+            outline: none;
+        }
+
+
+        /* 關於我們 */
+        .swiper_about {
+            width: 60%;
+            height: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+
+        .weare,
+        .wedo {
+       
+            display: flex;
+        }
+
+
+        #boss {
+            width: 50%;
+            height: 100%;
+            background-image: url(./素材/關於我們-1.png);
+            background-position: top;
+
+        }
+
+
+        .textoutsidebox {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 10%;
+
+        }
+
+        .text {
+
+            line-height: 30px;
+
+            font-size: 16px;
+            text-align: justify;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+
+        #founder {
+            width: 50%;
+            height: 100%;
+            background-image: url(./素材/關於我們-3.jpg);
+            background-size: cover;
+        }
+
+        .swiper-pagination-about {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第一頁 -->
+    <div id="logo" data-aos="fade-up" data-aos-easing="ease-in-sine"></div>
+
+    <div id="homepagebackground" data-aos="fade-right" data-aos-easing="ease-in-sine">
+        <div id="homepic-1" data-aos="fade-right " data-aos-delay="500" data-aos-easing="ease-in-sine"></div>
+        <div id="homepic-2" data-aos="fade-left" data-aos-delay="900" data-aos-easing="ease-in-sine"></div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " id="navbar">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MENS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="chooseitem" width="50%">
+                            <a class="dropdown-item" href="#">ALL PRODUCTS</a>
+                            <a class="dropdown-item" href="#">NEW ARRIVALS</a>
+                            <a class="dropdown-item" href="#">BEACHWEAR</a>
+                            <a class="dropdown-item" href="#">T-SHIRTS</a>
+                            <a class="dropdown-item" href="#">HOODIES</a>
+                            <a class="dropdown-item" href="#">STRINGERS & VESTS</a>
+                            <a class="dropdown-item" href="#">TRACKSUITS</a>
+                            <a class="dropdown-item" href="#">BOTTOMS & LEGGINGS</a>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        WOMENS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="chooseitem" width="50%">
+                            <a class="dropdown-item" href="#">ALL PRODUCTS</a>
+                            <a class="dropdown-item" href="#">NEW ARRIVALS</a>
+                            <a class="dropdown-item" href="#">BEACHWEAR</a>
+                            <a class="dropdown-item" href="#">T-SHIRTS</a>
+                            <a class="dropdown-item" href="#">SPORTS BRA</a>
+                            <a class="dropdown-item" href="#">STRINGERS & VESTS</a>
+                            <a class="dropdown-item" href="#">CO-ORD SETS</a>
+                            <a class="dropdown-item" href="#">BOTTOMS & LEGGINGS</a>
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ACCESSORIES
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="chooseitem" width="50%">
+                            <a class="dropdown-item" href="#">ALL PRODUCTS</a>
+                            <a class="dropdown-item" href="#">HEADWEAR</a>
+                            <a class="dropdown-item" href="#">EQUIPMENT</a>
+                            <a class="dropdown-item" href="#">BAGS</a>
+                            <a class="dropdown-item" href="#">SOCKS</a>
+                            <a class="dropdown-item" href="#">BOTTLES</a>
+
+                        </div>
+
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">NEW ARRIVAL</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 商品列Swiper -->
+    <br>
+    <p> SHOP MENS </p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-1" id="menpic-1"></div>
+                    <div class="product text-left">WP T-SHIRT</div>
+                    <div class="price text-left">$20.00 USD</div>
+                    <div class="star text-left">★★★★(2092)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-2"></div>
+                    <div class="product text-left">Apolo T-SHIRT</div>
+                    <div class="price text-left">$25.00 USD</div>
+                    <div class="star text-left">★★★★(1846)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-3"></div>
+                    <div class="product text-left">Critical HOODIE</div>
+                    <div class="price text-left">$55.00 USD</div>
+                    <div class="star text-left">★★★★★(5487)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-4"></div>
+                    <div class="product text-left">Vent Sleeveless 2.0</div>
+                    <div class="price text-left">$12.00 USD</div>
+                    <div class="star text-left">★★★(87)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-5"></div>
+                    <div class="product text-left">Active Jacket</div>
+                    <div class="price text-left">$30.00 USD</div>
+                    <div class="star text-left">★★★(77)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-6"></div>
+                    <div class="product text-left">Metal Short Sleeve</div>
+                    <div class="price text-left">$8.00 USD</div>
+                    <div class="star text-left">★★★★(44)</div>
+                </a>
+            </div>
+            <div class="swiper-slide"><a href="">
+                    <div class="menpic-7"></div>
+                    <div class="product text-left">Pulse Motivation Short</div>
+                    <div class="price text-left">$12.00 USD</div>
+                    <div class="star text-left">★★★★★(87)</div>
+                </a></div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-8"></div>
+                    <div class="product text-left">Man Jacket</div>
+                    <div class="price text-left">$60.00 USD</div>
+                    <div class="star text-left">★★(87)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="menpic-9"></div>
+                    <div class="product text-left">Motivation Short</div>
+                    <div class="price text-left">$82.00 USD</div>
+                    <div class="star text-left">★★★★(124)</div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <br>
+    <p>SHOP WOMENS</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-1"></div>
+                    <div class="product text-left">Training Leggings</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(9851)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-2"></div>
+                    <div class="product text-left">Sports Bra</div>
+                    <div class="price text-left">$40.00 USD</div>
+                    <div class="star text-left">★★★★★(6612)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-3"></div>
+                    <div class="product text-left">Flex Tank</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★★(8799)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-4"></div>
+                    <div class="product text-left">Crop Top</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(7719)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-5"></div>
+                    <div class="product text-left">Layer Jacket</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(719)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-6"></div>
+                    <div class="product text-left">Fitness Set</div>
+                    <div class="price text-left">$30.00 USD</div>
+                    <div class="star text-left">★★★(79)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-7"></div>
+                    <div class="product text-left">Set Green</div>
+                    <div class="price text-left">$31.00 USD</div>
+                    <div class="star text-left">★★★(79)</div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <div class="womenpic-8"></div>
+                    <div class="product text-left">Sport Bra</div>
+                    <div class="price text-left">$35.00 USD</div>
+                    <div class="star text-left">★★★★(77)</div>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- 搜尋框 -->
+
+    <div id="search"></div>
+    <div id="cart"></div>
+    <div id="member"></div>
+
+
+    <!-- 配件區 -->
+    <div id="accesary">
+        <a href="">
+            <div id="bigbox">
+                <div class="accesarypics" data-aos="fade-up" data-aos-duration="2000" id="accesarypics-1">
+                    <div class="mask">
+                        <h4>Water Bottle</h4>
+                        <h5>$19.99 USD</h5>
+                        <h4>click to view</h4>
+                    </div>
+                </div>
+                <div class="accesarypics" data-aos="fade-up" data-aos-duration="2000" id="accesarypics-2">
+                    <div class="mask">
+                        <h4>Yoga Band</h4>
+                        <h5>$8.00 USD</h5>
+                        <h4>click to view</h4>
+                    </div>
+                </div>
+                <div class="accesarypics" data-aos="fade-up" data-aos-duration="2000" id="accesarypics-3">
+                    <div class="mask">
+                        <h4>Lifting Gloves</h4>
+                        <h5>$30.00 USD</h5>
+                        <h4>click to view</h4>
+                    </div>
+                </div>
+                <div class="accesarypics" data-aos="fade-up" data-aos-duration="2000" id="accesarypics-4">
+                    <div class="mask">
+                        <h4>Yoga Brick</h4>
+                        <h5>$5.15 USD</h5>
+                        <h4>click to view</h4>
+                    </div>
+                </div>
+                <div class="accesarypics" data-aos="fade-up" data-aos-duration="2000" id="accesarypics-5">
+                    <div class="mask">
+                        <h4>Foam Roller</h4>
+                        <h5>$40.50 USD</h5>
+                        <h4>click to view</h4>
+                    </div>
+                </div>
+                <div class="accesarypics" data-aos="fade-up" data-aos-duration="2000" id="accesarypics-6">
+                    <div class="mask">
+                        <h4>Shaker</h4>
+                        <h5>$9.00 USD</h5>
+                        <h4>click to view</h4>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div id="accesarybig" data-aos="flip-right">
+
+        </div>
+    </div>
+
+    <!-- 新品區塊 -->
+    <div class="allnew">
+        <div id="new">
+            <div class="swiper-container content_container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="new-1-1"></div>
+                    <div class="swiper-slide" id="new-2-1"></div>
+                    <div class="swiper-slide" id="new-3-1"></div>
+                    <div class="swiper-slide" id="new-4-1"></div>
+                    <div class="swiper-slide" id="new-5-1"></div>
+
+                </div>
+
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination-2"></div>
+            <!-- Add Arrows -->
+            <div class="prev"><i class="arrow left"></i>Prev</div>
+            <div class="next">Next<i class="arrow right"></i></div>
+        </div>
+
+
+
+
+        <!-- 右半邊 -->
+        <!-- Swiper -->
+        <div class="swiper-container right-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="new-1-2"></div>
+                <div class="swiper-slide" id="new-2-2"></div>
+                <div class="swiper-slide" id="new-3-2"></div>
+                <div class="swiper-slide" id="new-4-2"></div>
+                <div class="swiper-slide" id="new-5-2"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 關於我們的Swiper -->
+    <div class="swiper-container swiper_about">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide weare">
+                <div id="boss"></div>
+                <div class="textoutsidebox">
+                    <div class="text">
+                        <h2>Who we are</h2>
+
+                        We are leading sportswear and accessories brand in the world, providing the most diverse
+                        high-quality products on the market. Founded in 2020 by a group of college friends,we are
+                        currently
+                        the number one sports brand in Europe. Our headquarters is located in UK. Work with team members
+                        and
+                        sportsmen from diverse backgrounds and operate in more than 70 countries.
+                        <!-- The purpose of our
+                        existence is to create tools that can help people release their incredible potential and put
+                        their
+                        ideas into practice. As long as you are willing to believe in yourself, we will help you achieve
+                        your goals. -->
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide wedo">
+                <div id="founder"></div>
+                <div class="textoutsidebox">
+                    <div class="text">
+                        <h2>What we do </h2>
+
+                        Our goal is to inspire people all over the world and make the most comfortable sportswear that
+                        everyone can use. What is the real goal? We are proud to provide the widest selection of
+                        products
+                        and excellent product value. We manufacture all products by ourselves, and affiliate the cost of
+                        third parties to provide the most favorable price, while ensuring the highest quality of the
+                        products.
+                        <!-- Equipment and state-of-the-art measurement methods to ensure that we provide
+                        high-purity
+                        products and meet the highest standards when the warehouse is reset. We go beyond specializing
+                        in
+                        high-quality sportswear, and also provide a series of sports accessories, using the most
+                        advanced
+                        design to meet various needs and help achieve goals. We will also share the most immediate and
+                        important nutritional knowledge on social media and blogs, including recipes, fitness and
+                        various
+                        related knowledge, to assist with the needs of fitness training at all stages, so we have a
+                        group of
+                        fast-growing communities. -->
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-about"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+    <!-- navbar -->
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
+    </script>
+
+    <!-- 搜尋框 -->
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <!-- 商品列 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            direction: getDirection(),
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                    swiper.changeDirection(getDirection());
+                }
+            }
+        });
+
+        function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+        }
+    </script>
+
+    <!-- 新品區塊 -->
+    <script>
+        var content_container = new Swiper('.content_container', {
+            pagination: {
+                el: '.swiper-pagination-2',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+        });
+        var right_swiper = new Swiper('.right-swiper');
+
+
+        // 2個合併
+
+        content_container.on('slideChange', function () {
+            // activeIndex為被啟動的物件索引值
+            // content_container.activeIndex 抓取content_container被啟動的索引值
+            console.log(content_container.activeIndex);
+            // .slideTo(index[索引值必填], speed[選填], runCallbacks[選填]);當選到對應索引值進行滑動，用於兩個swiper間控制
+            //contnet_swiper.slideTo(content_container.activeIndex);對應content_container的索引值，控制contnet_swiper移動相對應索引值
+            right_swiper.slideTo(content_container.activeIndex);
+        });
+
+
+    </script>
+
+
+<!-- 關於我們 -->
+<script>
+    var swiper_about = new Swiper('.swiper_about', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+            el: '.swiper-pagination-about',
+            clickable: true,
+        },
+    });
+
+
+
+  
+
+
+
+</script>
+
+</body>
+
+</html>

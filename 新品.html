@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .banner {
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(255, 220, 226);
+        }
+
+        .box {
+            width: 50%;
+            height: 100%;
+            background-color: rgb(255, 220, 226);
+            display: flex;
+            float: left;
+        }
+
+        #pic1 {
+            margin: auto;
+
+        }
+
+        .prev {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            z-index: 10;
+        }
+
+        .next {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="https://i.pinimg.com/originals/a8/ac/b3/a8acb384b6919de0a02036887e7565ac.jpg" alt=""
+                        width="40%" height="50%" id="pic1">
+                </div>
+                <div class="box">
+                    <img width="100%" height="100%"
+                        src="https://i.pinimg.com/originals/f0/7f/a4/f07fa48e8b55c4398e5ae5ea26d44926.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="https://i.pinimg.com/originals/de/2a/2b/de2a2bd37b44bfb4022d279b46f7fb1d.jpg" alt=""
+                        width="40%" height="50%" id="pic1">
+                </div>
+                <div class="box">
+                    <img width="100%" height="100%"
+                        src="https://i.pinimg.com/736x/73/ba/f1/73baf1f74021710e7f7b97145216a724.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Arrows -->
+    </div>
+        <div class="prev"><i class="arrow left"></i>Prev</div>
+        <div class="next">Next</div>
+        
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

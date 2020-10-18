@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css"
+        integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
+        crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        .swiper_about {
+            width: 60%;
+            height: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .weare,
+        .wedo {
+
+            display: flex;
+
+        }
+
+        #boss {
+            width: 50%;
+            height: 100%;
+            background-image: url(./素材/關於我們-1.png);
+            background-position: top;
+
+        }
+
+
+        .textoutsidebox {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 10%;
+
+        }
+
+        .text {
+
+            line-height: 30px;
+
+            font-size: 16px;
+            text-align: justify;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+
+        #founder {
+            width: 50%;
+            height: 100%;
+            background-image: url(./素材/關於我們-3.jpg);
+            background-size: cover;
+        }
+
+        .swiper-pagination-about {
+            display: none;
+        }
+
+
+        /* IG-Swiper  */
+        #igbackground {
+            width: 100%;
+            height: 380px;
+            background-color: rgb(246, 231, 236);
+            display: flex;
+            align-content: center;
+            position: relative;
+
+        }
+
+        #ig-leftside {
+            width: 60%;
+            height: 100%;
+            /* background-color: royalblue; */
+            margin-left: 70px;
+            text-align: center;
+            align-content: center;
+
+
+        }
+
+        #ig_swiper{
+            width: 20%;
+            height: 90%;
+            background-color: aqua;
+        }
+
+        #big-ig {
+            width: 20%;
+            height: 30%;
+            /* background-color: saddlebrown; */
+            margin: 20px auto;
+            background-image: url(./素材/icon-ig-02-01-01-02.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+        }
+
+       
+        #follow {
+            color: rgb(213, 176, 156);
+            font-size: 26px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        #slogn {
+
+            color: rgb(213, 176, 156);
+            font-size: 14px;
+            font-family: arial;
+            line-height: 24px;
+        }
+
+        .btn {
+            border: none;
+            /* Remove borders */
+            color: white;
+            /* Add a text color */
+            padding: 14px 28px;
+            /* Add some padding */
+            cursor: pointer;
+            font-size: 14px;
+            /* Add a pointer cursor on mouse-over */
+            margin-top: 60px;
+        }
+
+        .shop {
+            background-color: rgb(213, 176, 156);
+            margin-right: 50px;
+        }
+
+
+        .shop:hover {
+            background-color: rgb(129, 91, 70);
+        }
+
+        .followus {
+            background-color: rgb(213, 176, 156);
+        }
+
+        .followus:hover {
+            background-color: rgb(129, 91, 70);
+        }
+
+
+        /* 頁尾 */
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(218, 207, 223);
+            display: flex;
+
+
+
+        }
+
+        .details {
+            width: 33.33%;
+            height: 100%;
+            
+            text-align: center;
+            line-height: 50px;
+        }
+
+
+        /* 燈箱 */
+        .details,a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Chilanka', cursive;
+            margin-right: 10px;
+
+        }
+
+
+        #textdetail{
+            color: rgb(107, 141, 136);
+        }
+        .icongroups{
+         position: relative;
+        }
+        #icongroups{
+            width: 30%;
+            height: 100%;
+            
+            /* background-color: royalblue; */
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            right: 0px;
+            
+
+        }
+        #facebook{
+            width: 20%;
+            height: 100%;
+            
+            background-image: url(./素材/icon-fb-01.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #ig_icon{
+            width: 20%;
+            height: 100%;
+           
+            background-image: url(./素材/icon-ig-01.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        #twitter{
+            width: 20%;
+            height: 100%;
+            
+            background-image: url(./素材/icon-twtter-01.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- 關於我們的Swiper -->
+    <div class="swiper-container swiper_about">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide weare">
+                <div id="boss"></div>
+                <div class="textoutsidebox">
+                    <div class="text">
+                        <h2>Who we are</h2>
+
+                        We are leading sportswear and accessories brand in the world, providing the most diverse
+                        high-quality products on the market. Founded in 2020 by a group of college friends,we are
+                        currently
+                        the number one sports brand in Europe. Our headquarters is located in UK. Work with team members
+                        and
+                        sportsmen from diverse backgrounds and operate in more than 70 countries. 
+                        <!-- The purpose of our
+                        existence is to create tools that can help people release their incredible potential and put
+                        their
+                        ideas into practice. As long as you are willing to believe in yourself, we will help you achieve
+                        your goals. -->
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide wedo">
+                <div id="founder"></div>
+                <div class="textoutsidebox">
+                    <div class="text">
+                        <h2>What we do </h2>
+
+                        Our goal is to inspire people all over the world and make the most comfortable sportswear that
+                        everyone can use. What is the real goal? We are proud to provide the widest selection of
+                        products
+                        and excellent product value. We manufacture all products by ourselves, and affiliate the cost of
+                        third parties to provide the most favorable price, while ensuring the highest quality of the
+                        products. 
+                        <!-- Equipment and state-of-the-art measurement methods to ensure that we provide
+                        high-purity
+                        products and meet the highest standards when the warehouse is reset. We go beyond specializing
+                        in
+                        high-quality sportswear, and also provide a series of sports accessories, using the most
+                        advanced
+                        design to meet various needs and help achieve goals. We will also share the most immediate and
+                        important nutritional knowledge on social media and blogs, including recipes, fitness and
+                        various
+                        related knowledge, to assist with the needs of fitness training at all stages, so we have a
+                        group of
+                        fast-growing communities. -->
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-about"></div>
+    </div>
+
+
+
+    <!-- IG-Swiper -->
+    <div id="igbackground">
+        <div id="ig-leftside">
+            <div id="big-ig"></div>
+            <div id="follow">@BUUACTIVEWEAR </div>
+            <div id="slogn">Like what you see? Shop the looks from your fave influencer <br>
+                of the moment straight from the “INS”'.</div>
+
+            <button class="btn shop">SHOP INSTAGRAM</button>
+            <button class="btn followus">FOLLOW US</button>
+        </div>
+
+       <div id="ig_swiper">
+
+       </div>
+
+    </div>
+
+
+    <!-- 頁尾 -->
+
+    <footer>
+        <div class="details">
+           
+                <a href="./素材/燈箱-09.jpg" data-lightbox="image-1" data-title="My caption" >Orders |</a>
+                <a href="./素材/燈箱-11.jpg" data-lightbox="image-1" data-title="My caption">Shipping |</a>
+                <a href="./素材/燈箱-12-12.jpg" data-lightbox="image-1" data-title="My caption">Returns |</a>
+                <a href="./素材/燈箱-10.jpg" data-lightbox="image-1" data-title="My caption">Contact Us</a>
+        
+
+        </div>
+        <div class="details">
+            <div id="textdetail">
+                使用條款及免責聲明 | 2020 © BUUFIT</div>
+
+        </div>
+        <div class="details icongroups">
+            <div id="icongroups">
+                <div id="facebook"></div>
+                <div id="ig_icon"></div>
+                <div id="twitter"></div>
+            </div>
+
+        </div>
+    </footer>
+
+    
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
+    <script>
+        var swiper_about = new Swiper('.swiper_about', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: '.swiper-pagination-about',
+                clickable: true,
+            },
+        });
+
+
+
+       
+
+
+
+    </script>
+
+
+    <!-- 頁尾燈箱 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+
+</html>
