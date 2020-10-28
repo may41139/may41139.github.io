@@ -132,10 +132,29 @@
             margin: 0 20px;
         }
 
+        .navbar-toggler:focus {
+            outline: none;
+        }
 
-
-
-
+/* nav的搜尋 */
+.fa-search{
+    color: rgb(194, 125, 173);
+}
+.fa-search:hover{
+    color:rgb(250, 208, 208);
+}
+.fa-shopping-cart{
+    color: rgb(194, 125, 173);
+} 
+.fa-shopping-cart:hover{
+    color:rgb(250, 208, 208);
+} 
+.fa-user{
+    color: rgb(194, 125, 173);
+} 
+.fa-user:hover{
+    color: rgb(250, 208, 208);
+} 
 
 
         /* 商品列 */
@@ -154,7 +173,7 @@
             text-align: right;
             width: 15%;
             line-height: 80px;
-           
+
         }
 
         #viewmore a {
@@ -330,6 +349,7 @@
 
         /* 搜尋框 */
 
+
         #search {
             width: 30px;
             height: 30px;
@@ -490,25 +510,13 @@
             color: white;
             font-family: 'Amatic SC', cursive;
             font-size: 24px;
-
+            font-weight: 700;
         }
 
         .accesarypics:hover .mask {
             top: 0;
             transition: 0.8s;
         }
-
-        /* @media (max-width: 760px) {
-            .swiper-button-next {
-                right: 20px;
-                transform: rotate(90deg);
-            }
-
-            .swiper-button-prev {
-                left: 20px;
-                transform: rotate(90deg);
-            }
-        } */
 
 
         /* 新品區塊 */
@@ -876,14 +884,15 @@
         }
 
         #icongroups {
-            width: 33.33%;
+           width: 33.33%;
             height: 100%;
-            margin-right: 150px;
+            /* margin-right: 150px; */
             /* background-color: royalblue; */
             display: flex;
             justify-content: space-around;
             position: absolute;
             right: 0px;
+           
 
 
         }
@@ -917,6 +926,25 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
+
+
+        /* RWD開始 */
+
+        @media(max-width: 1200px){
+            .mask {
+            top: 65%;}
+            #textdetail {
+            font-size: 12px;
+        }
+      .details{
+          font-size: 12px;
+      }
+        .details a {
+            color: rgb(245, 241, 241);
+            font-size: 12px;
+            font-weight: 300;
+        }
+        }
     </style>
 </head>
 
@@ -942,19 +970,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">MENS</a>
+                    <a class="nav-link" href="#shopmen">MENS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">WOMENS</a>
+                    <a class="nav-link" href="#shopwomen">WOMENS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ACCESSORIES</a>
+                    <a class="nav-link" href="#accesary ">ACCESSORIES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">NEW ARRIVAL</a>
+                    <a class="nav-link" href="#allnew">NEW ARRIVAL</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT US</a>
+                    <a class="nav-link" href="#aboutus">ABOUT US</a>
                 </li>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -966,14 +994,20 @@
                 </li>
 
             </ul>
-
+          
+                <div id="searchgroup" class="my-2 my-lg-0" style="font-size: 25px;">
+                    <i class="fas fa-search mx-3"></i>
+                    <i class="fas fa-shopping-cart mx-3"></i>
+                    <i class="far fa-user mx-3"></i>
+                </div>
+          
         </div>
     </nav>
 
     <!-- 商品列 -->
     <br>
 
-    <div class="container">
+    <div class="container" id="shopmen">
 
         <div class="shopmen">
             <div class="shopmen-title" style="width: 85%; text-align: center; margin-left: 100px;">SHOP MENS</div>
@@ -985,7 +1019,7 @@
 
         <div class="row">
             <div class="col-12 col-lg-3 col-md-6  mensbox">
-                <a href="">
+                <a href="https://row.gymshark.com/products/gymshark-critical-stringer-navy">
                     <div class="menpic-1" id="menpic-1"></div>
                     <div class="product text-left">WP T-SHIRT</div>
                     <div class="price text-left">$20.00 USD</div>
@@ -993,7 +1027,8 @@
                 </a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 mensbox">
-                <a href="">
+                <a
+                    href="https://row.gymshark.com/products/gymshark-critical-stringer-black?refSrc=4821446918215&nosto=pdp-alsolike">
                     <div class="menpic-2"></div>
                     <div class="product text-left">Apolo T-SHIRT</div>
                     <div class="price text-left">$25.00 USD</div>
@@ -1001,7 +1036,7 @@
                 </a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 mensbox">
-                <a href="">
+                <a href="https://row.gymshark.com/products/gymshark-arrival-graphic-shorts-black">
                     <div class="menpic-3"></div>
                     <div class="product text-left">Critical HOODIE</div>
                     <div class="price text-left">$55.00 USD</div>
@@ -1009,7 +1044,8 @@
                 </a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 mensbox">
-                <a href="">
+                <a
+                    href="https://row.gymshark.com/products/gymshark-arrival-graphic-t-shirt-light-grey?refSrc=4866405269575&nosto=pdp-alsolike">
                     <div class="menpic-4"></div>
                     <div class="product text-left">Vent Sleeveless 2.0</div>
                     <div class="price text-left">$12.00 USD</div>
@@ -1021,7 +1057,7 @@
 
     <br>
 
-    <div class="container">
+    <div class="container" id="shopwomen">
         <div class="shopmen">
             <div class="shopmen-title" style="width: 85%; text-align: center; margin-left: 100px;">SHOP WOMENS</div>
             <div id="viewmore">
@@ -1032,7 +1068,7 @@
 
         <div class="row">
             <div class="col-12 col-lg-3 col-md-6  womensbox">
-                <a href="">
+                <a href="https://row.gymshark.com/products/gymshark-camo-seamless-leggings-light-green">
                     <div class="womenpic-1"></div>
                     <div class="product text-left">Training Leggings</div>
                     <div class="price text-left">$35.00 USD</div>
@@ -1042,7 +1078,7 @@
 
 
             <div class="col-12 col-lg-3 col-md-6  womensbox">
-                <a href="">
+                <a href="https://row.gymshark.com/products/gymshark-flex-sports-long-sleeve-crop-top-red-marl-claret">
                     <div class="womenpic-2"></div>
                     <div class="product text-left">Sports Bra</div>
                     <div class="price text-left">$40.00 USD</div>
@@ -1053,7 +1089,7 @@
 
 
             <div class="col-12 col-lg-3 col-md-6  womensbox">
-                <a href="">
+                <a href="https://row.gymshark.com/products/gymshark-vital-seamless-vest-black-marl-1">
                     <div class="womenpic-3"></div>
                     <div class="product text-left">Flex Tank</div>
                     <div class="price text-left">$35.00 USD</div>
@@ -1064,7 +1100,7 @@
 
 
             <div class="col-12 col-lg-3 col-md-6  womensbox">
-                <a href="">
+                <a href="https://row.gymshark.com/products/gymshark-pippa-training-pullover-white">
                     <div class="womenpic-4"></div>
                     <div class="product text-left">Crop Top</div>
                     <div class="price text-left">$35.00 USD</div>
@@ -1080,9 +1116,12 @@
 
     <!-- 搜尋框 -->
 
-    <div id="search"></div>
+    <!-- <div id="search"></div>
     <div id="cart"></div>
-    <div id="member"></div>
+    <div id="member"></div> -->
+
+
+
 
 
     <!-- 配件區 -->
@@ -1139,7 +1178,7 @@
     </div>
 
     <!-- 新品區塊 -->
-    <div class="allnew">
+    <div class="allnew" id="allnew">
         <div id="new">
             <div class="swiper-container content_container">
                 <div class="swiper-wrapper">
@@ -1179,7 +1218,7 @@
 
 
     <!-- 關於我們的Swiper -->
-    <div class="swiper-container swiper_about">
+    <div class="swiper-container swiper_about" id="aboutus">
         <div class="swiper-wrapper">
             <div class="swiper-slide weare">
                 <div id="boss"></div>
@@ -1264,7 +1303,7 @@
 
     <footer>
         <div class="details">
-
+           2020 ©BUUFIT   |
             <a href="./素材/燈箱-09.jpg" data-lightbox="image-1" data-title="My caption">Orders |</a>
             <a href="./素材/燈箱-11.jpg" data-lightbox="image-1" data-title="My caption">Shipping |</a>
             <a href="./素材/燈箱-12-12.jpg" data-lightbox="image-1" data-title="My caption">Returns |</a>
@@ -1274,11 +1313,12 @@
         </div>
         <div class="details">
             <div id="textdetail">
-                使用條款及免責聲明 | 2020 © BUUFIT</div>
+                此網頁為練習用，不做商業行為，若有侵權疑慮請告知</div>
 
         </div>
         <div class="details icongroups">
             <div id="icongroups">
+               
                 <div id="facebook"></div>
                 <div id="ig_icon"></div>
                 <div id="twitter"></div>
@@ -1313,7 +1353,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
                 document.getElementById("navbar").style.top = "0";
             } else {
                 document.getElementById("navbar").style.top = "-100px";
@@ -1323,7 +1363,7 @@
 
 
 
-    <!-- 搜尋框 -->
+    <!-- 首頁效果 -->
 
 
 
@@ -1331,6 +1371,8 @@
     <script>
         AOS.init();
     </script>
+
+
 
 
 
