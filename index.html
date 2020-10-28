@@ -13,14 +13,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Architects+Daughter&display=swap"
-        rel="stylesheet"> 
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/d3b1d9e434.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css"
-    integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
-    crossorigin="anonymous" />
+        integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
+        crossorigin="anonymous" />
 
-   <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
 
     <style>
         html,
@@ -96,17 +96,24 @@
         }
 
         /* navbar */
-        .navbar {
-            height: 100px;
-           
-            z-index: 500;
 
+        #navbar {
+            height: 100px;
+            z-index: 30;
+            position: fixed;
+            /* Make it stick/fixed */
+            top: -100px;
+            /* Hide the navbar 50 px outside of the top view */
+            width: 100%;
+            /* Full width */
+            transition: top 0.3s;
+            /* Transition effect when sliding down (and up) */
         }
 
-      
+
         .bg-light {
             background-color: rgb(252, 250, 251) !important;
-           
+
         }
 
         .navbar-light .navbar-nav .nav-link {
@@ -125,10 +132,10 @@
             margin: 0 20px;
         }
 
-       
-        
 
-      
+
+
+
 
 
         /* 商品列 */
@@ -142,18 +149,19 @@
             margin-bottom: 20px;
         }
 
-        #viewmore{
+        #viewmore {
             font-size: 18px;
-            text-align:right;
-            width:15%;
+            text-align: right;
+            width: 15%;
             line-height: 80px;
+           
         }
 
-        #viewmore a{
+        #viewmore a {
             color: rgb(41, 41, 212);
         }
 
-        #viewmore a:hover{
+        #viewmore a:hover {
             color: rgb(91, 91, 182);
         }
 
@@ -176,7 +184,7 @@
         a {
             color: black;
             text-decoration: none;
-            
+
         }
 
         a:hover {
@@ -677,7 +685,7 @@
         .swiper_about {
             width: 100%;
             height: 100%;
-          
+
         }
 
 
@@ -731,8 +739,8 @@
         }
 
 
-    /* IG-Swiper  */
-    #igbackground {
+        /* IG-Swiper  */
+        #igbackground {
             width: 100%;
             height: 380px;
             background-color: rgb(246, 231, 236);
@@ -754,7 +762,7 @@
 
         }
 
-        #ig_swiper{
+        #ig_swiper {
             width: 20%;
             height: 100%;
             margin: auto 0;
@@ -778,7 +786,7 @@
 
         }
 
-       
+
         #follow {
             color: rgb(213, 176, 156);
             font-size: 26px;
@@ -858,14 +866,16 @@
         }
 
 
-        #textdetail{
+        #textdetail {
             color: rgb(107, 141, 136);
             line-height: 80px;
         }
-        .icongroups{
-         position: relative;
+
+        .icongroups {
+            position: relative;
         }
-        #icongroups{
+
+        #icongroups {
             width: 33.33%;
             height: 100%;
             margin-right: 150px;
@@ -874,31 +884,34 @@
             justify-content: space-around;
             position: absolute;
             right: 0px;
-            
+
 
         }
-        #facebook{
+
+        #facebook {
             width: 20%;
             height: 100%;
-            
+
             background-image: url(./素材/icon-fb-01.png);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
         }
-        #ig_icon{
+
+        #ig_icon {
             width: 20%;
             height: 100%;
-           
+
             background-image: url(./素材/icon-ig-01.png);
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
         }
-        #twitter{
+
+        #twitter {
             width: 20%;
             height: 100%;
-            
+
             background-image: url(./素材/icon-twtter-01.png);
             background-position: center;
             background-size: contain;
@@ -917,7 +930,7 @@
     </div>
 
     <!-- navbar -->
-    <nav class="navbar  navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light " id="navbar">
         <a class="navbar-brand" href="#">
             <img src="./素材/logo-2_工作區域 1.無背景.png" width="110" height="100" alt="">
         </a>
@@ -953,19 +966,20 @@
                 </li>
 
             </ul>
-          
+
         </div>
     </nav>
 
     <!-- 商品列 -->
     <br>
-    
+
     <div class="container">
-       
+
         <div class="shopmen">
-            <div class="shopmen-title" style="width: 85%; text-align: center; margin-left: 100px;">SHOP MENS</div>  
+            <div class="shopmen-title" style="width: 85%; text-align: center; margin-left: 100px;">SHOP MENS</div>
             <div id="viewmore">
-                <a href="https://row.gymshark.com/collections/must-have/mens?sortBy=sortRelevance">more  <i class="fas fa-angle-double-right"></i></a> 
+                <a href="https://row.gymshark.com/collections/must-have/mens?sortBy=sortRelevance">more <i
+                        class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
 
@@ -1006,12 +1020,13 @@
     </div>
 
     <br>
-    
+
     <div class="container">
         <div class="shopmen">
-            <div class="shopmen-title" style="width: 85%; text-align: center; margin-left: 100px;">SHOP WOMENS</div>  
+            <div class="shopmen-title" style="width: 85%; text-align: center; margin-left: 100px;">SHOP WOMENS</div>
             <div id="viewmore">
-                <a href="https://row.gymshark.com/collections/must-have/womens?sortBy=sortRelevance">more  <i class="fas fa-angle-double-right"></i></a> 
+                <a href="https://row.gymshark.com/collections/must-have/womens?sortBy=sortRelevance">more <i
+                        class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
 
@@ -1206,7 +1221,7 @@
                         in
                         high-quality sportswear, and also provide a series of sports accessories, using the most
                         advanced
-                        design to meet various needs and help achieve goals. 
+                        design to meet various needs and help achieve goals.
                         <!-- We will also share the most immediate and
                         important nutritional knowledge on social media and blogs, including recipes, fitness and
                         various
@@ -1226,51 +1241,51 @@
     </div>
 
 
-<!-- IG-Swiper -->
-<div id="igbackground">
-    <div id="ig-leftside">
-        <div id="big-ig"></div>
-        <div id="follow">@BUUACTIVEWEAR </div>
-        <div id="slogn">Like what you see? Shop the looks from your fave influencer <br>
-            of the moment straight from the “INS”'.</div>
+    <!-- IG-Swiper -->
+    <div id="igbackground">
+        <div id="ig-leftside">
+            <div id="big-ig"></div>
+            <div id="follow">@BUUACTIVEWEAR </div>
+            <div id="slogn">Like what you see? Shop the looks from your fave influencer <br>
+                of the moment straight from the “INS”'.</div>
 
-        <button class="btn shop">SHOP INSTAGRAM</button>
-        <button class="btn followus">FOLLOW US</button>
-    </div>
+            <button class="btn shop">SHOP INSTAGRAM</button>
+            <button class="btn followus">FOLLOW US</button>
+        </div>
 
-   <div id="ig_swiper">
+        <div id="ig_swiper">
 
-   </div>
-
-</div>
-
-
-<!-- 頁尾 -->
-
-<footer>
-    <div class="details">
-       
-            <a href="./素材/燈箱-09.jpg" data-lightbox="image-1" data-title="My caption" >Orders |</a>
-            <a href="./素材/燈箱-11.jpg" data-lightbox="image-1" data-title="My caption">Shipping |</a>
-            <a href="./素材/燈箱-12-12.jpg" data-lightbox="image-1" data-title="My caption">Returns |</a>
-            <a href="./素材/燈箱-10.jpg" data-lightbox="image-1" data-title="My caption">Contact Us</a>
-    
-
-    </div>
-    <div class="details">
-        <div id="textdetail">
-            使用條款及免責聲明 | 2020 © BUUFIT</div>
-
-    </div>
-    <div class="details icongroups">
-        <div id="icongroups">
-            <div id="facebook"></div>
-            <div id="ig_icon"></div>
-            <div id="twitter"></div>
         </div>
 
     </div>
-</footer>
+
+
+    <!-- 頁尾 -->
+
+    <footer>
+        <div class="details">
+
+            <a href="./素材/燈箱-09.jpg" data-lightbox="image-1" data-title="My caption">Orders |</a>
+            <a href="./素材/燈箱-11.jpg" data-lightbox="image-1" data-title="My caption">Shipping |</a>
+            <a href="./素材/燈箱-12-12.jpg" data-lightbox="image-1" data-title="My caption">Returns |</a>
+            <a href="./素材/燈箱-10.jpg" data-lightbox="image-1" data-title="My caption">Contact Us</a>
+
+
+        </div>
+        <div class="details">
+            <div id="textdetail">
+                使用條款及免責聲明 | 2020 © BUUFIT</div>
+
+        </div>
+        <div class="details icongroups">
+            <div id="icongroups">
+                <div id="facebook"></div>
+                <div id="ig_icon"></div>
+                <div id="twitter"></div>
+            </div>
+
+        </div>
+    </footer>
 
 
 
@@ -1298,13 +1313,15 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 document.getElementById("navbar").style.top = "0";
             } else {
-                document.getElementById("navbar").style.top = "-50px";
+                document.getElementById("navbar").style.top = "-100px";
             }
         }
     </script>
+
+
 
     <!-- 搜尋框 -->
 
@@ -1368,10 +1385,10 @@
 
     </script>
 
-     <!-- 頁尾燈箱 -->
-     <script src="https://code.jquery.com/jquery-3.5.1.js"
-     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- 頁尾燈箱 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 </body>
 
